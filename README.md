@@ -13,13 +13,13 @@
     - Su Linux/MacOS:
 
       ```bash
-      $ source venv/bin/activate
+      $ source .venv/bin/activate
       ```
 
     - Su Windows:
 
       ```bash
-      $ .\venv\Scripts\activate
+      $ .\.venv\Scripts\activate
       ```
 
 3.  **Installazione delle Dipendenze**: Ora installa i pacchetti necessari eseguendo il seguente comando:
@@ -61,7 +61,7 @@ Prima di poter avviare il bot, è necessario crearne uno nuovo su Telegram e con
     - Vai alla [console di Firebase](https://console.firebase.google.com/) e crea un nuovo progetto.
     - Segui le istruzioni per dare un nome al tuo progetto e configurare le impostazioni necessarie.
 
-    3.2. **Configurazione del Database Firestore:**
+      3.2. **Configurazione del Database Firestore:**
 
     - Nel menu a sinistra, seleziona "Firestore Database".
     - Clicca su "Crea database".
@@ -69,14 +69,14 @@ Prima di poter avviare il bot, è necessario crearne uno nuovo su Telegram e con
     - Seleziona la regione più vicina a te.
     - Clicca su "Avanti" e poi su "Attiva".
 
-    3.3. **Aggiunta di Dati al Database:**
+      3.3. **Aggiunta di Dati al Database:**
 
     - Crea una nuova "Collezione" (ad esempio, "sentencesCollection").
     - Aggiungi documenti alla collezione, dove ogni documento rappresenta un dato.
     - Ogni documento può contenere campi di vario tipo (stringhe, numeri, array, ecc.).
     - **Importante:** Assicurati che ogni documento nella collezione `sentencesCollection` contenga un campo chiamato `sentences` che è un array di stringhe.
 
-    3.4. **Configurazione delle Regole di Sicurezza:**
+      3.4. **Configurazione delle Regole di Sicurezza:**
 
     - Nella scheda "Regole" del database Firestore, definisci le seguenti regole di sicurezza per controllare l'accesso ai tuoi dati:
 
@@ -98,7 +98,7 @@ Prima di poter avviare il bot, è necessario crearne uno nuovo su Telegram e con
 
     - Queste regole consentono a chiunque di leggere i documenti nella collezione `sentencesCollection`, ma richiedono l'autenticazione per la creazione e l'aggiornamento.
 
-    3.5. **Ottenimento del File di Credenziali:**
+      3.5. **Ottenimento del File di Credenziali:**
 
     - Nella console di progetto di Firebase, vai in impostazioni progetto -> account di servizio -> genera nuova chiave privata.
     - Questo genererà un file JSON, che conterrà le credenziali per connettere il tuo codice al database.
